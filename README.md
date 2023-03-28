@@ -6,7 +6,7 @@ Thanks for checking out this front-end coding challenge.
 
 This is a solution to the [Interactive card details form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-![Frontend Mentor - Interactive card details form](https://user-images.githubusercontent.com/125904295/221328360-3e635a1f-8ea2-49b7-b7a5-030ed813b061.jpg)
+![Frontend Mentor - Interactive card details form solution](https://user-images.githubusercontent.com/125904295/228366207-9638c2ee-276a-435f-b854-40fa5549c5bc.jpg)
 
 ## Table of contents
 
