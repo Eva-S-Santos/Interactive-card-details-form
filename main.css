@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+:root {
+  /*Primary*/
+
+  /*Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+*/
+
+  /*Neutral*/
+
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Red: hsl(0, 100%, 66%);
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.card-frente {
+  width: 285px;
+  height: 156px;
+  background-image: url("images/bg-card-front.png");
+  background-repeat: no-repeat;
+  border-radius: 7px;
+  position: absolute;
+  margin-top: 6.4rem;
+  margin-left: 1rem;
+  box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.134);
+}
+
+.logo-container {
+  padding-top: 1rem;
+}
+
+.logo {
+  width: 50px;
+  padding-left: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.cards-desing {
+  position: relative;
+}
+
+.contenido-tajeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.1rem;
+  color: var(--White);
+}
+
+.contenido-tajeta h1 {
+  font-size: 1rem;
+  letter-spacing: 2.4px;
+  font-weight: 400;
+}
+
+.contenido-tajeta span {
+  font-size: 0.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.nombre-numero-desing {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+}
+
+.card-atras {
+  background-image: url("images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+}
+.card-abajo {
+  width: 285px;
+  margin-left: 4rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1.7rem;
+}
+
+.cvc-num {
+  color: var(--White);
+  font-weight: 500;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 5.4rem;
+  left: 16.9rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem 1.2rem 2rem 1.2rem;
+}
+
+input[type="text"] {
+  padding: 0.7rem;
+  margin-top: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--Light-grayish-violet);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  border: 1px solid var(--Dark-grayish-violet);
+}
+
+::placeholder {
+  font-weight: 500;
+  color: var(--Dark-grayish-violet);
+  opacity: 0.5;
+}
+
+label {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.card-holder-space {
+  margin-top: 2.2rem;
+}
+
+.labels {
+  display: block;
+  margin-top: 0.6rem;
+}
+
+.label-date {
+  margin-right: 1.1rem;
+}
+.left-space {
+  margin-left: 0.4rem;
+}
+
+.inputs-abajo {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-size {
+  width: 45px;
+  margin-right: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.input-size-b {
+  width: 143px;
+  margin-left: 0.2rem;
+}
+
+button {
+  padding: 1rem;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  border-radius: 7px;
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 1px;
+  border: none;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+
+#card-num-val {
+  color: var(--Red);
+  font-size: 0.6rem;
+  padding-top: 0.5rem;
+  display: none;
+}
+
+#card-exp-val {
+  color: var(--Red);
+  font-size: 0.6rem;
+  display: none;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+#card-cvc-val {
+  color: var(--Red);
+  font-size: 0.6rem;
+  display: none;
+  margin-left: 0.3rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.completed-container {
+  margin-top: 5.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.check-icon-completed {
+  width: 65px;
+  margin-bottom: 1.6rem;
+}
+.completed-container h2 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.completed-container p {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--Dark-grayish-violet);
+}
+
+.continue-btn {
+  padding: 1rem 7.5rem;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  border-radius: 7px;
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 1px;
+  border: none;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .main-container {
+    width: 375px;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .main-container {
+    max-width: 1600px;
+    display: flex;
+    margin: auto;
+  }
+  .card-frente {
+    width: 447px;
+    height: 245px;
+    background-image: url("images/bg-card-front.png");
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 10rem;
+  }
+
+  .logo-container {
+    padding-top: 1.5rem;
+    padding-left: 0.8rem;
+  }
+
+  .logo {
+    width: 75px;
+    padding-left: 1.3rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .cards-desing {
+    position: relative;
+  }
+
+  .contenido-tajeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.1rem;
+    color: var(--White);
+  }
+
+  .contenido-tajeta h1 {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-top: 1.3rem;
+  }
+
+  .contenido-tajeta span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding-top: 0.5rem;
+    padding-bottom: 1.45rem;
+  }
+
+  .nombre-numero-desing {
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+  }
+
+  .card-atras {
+    background-image: url("images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    padding-bottom: 8.1rem;
+  }
+  .card-abajo {
+    width: 447px;
+    margin-left: 16rem;
+    margin-top: 26rem;
+    padding-bottom: 2rem;
+  }
+
+  .cvc-num {
+    color: var(--White);
+    font-weight: 500;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 32.1rem;
+    left: 35.7rem;
+  }
+  form {
+    margin: 12rem 10rem 0rem 7.5rem;
+  }
+  label {
+    font-size: 0.7rem;
+    margin-top: 1.4rem;
+  }
+
+  .left-space {
+    margin-left: -0.1rem;
+  }
+
+  ::placeholder {
+    font-size: 1rem;
+  }
+
+  .labels {
+    margin-top: 1.4rem;
+  }
+
+  .cvc-left-space {
+    margin-left: 1rem;
+  }
+  input {
+    width: 350px;
+  }
+
+  input[type="text"] {
+    margin-top: 0.6rem;
+  }
+
+  input[type="number"] {
+    margin-top: 0.6rem;
+  }
+  .input-size-b {
+    width: 163px;
+  }
+
+  .input-month {
+    width: 71px;
+  }
+
+  button {
+    width: 377px;
+    font-size: 0.9rem;
+  }
+  #card-num-val {
+    color: var(--Red);
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    display: none;
+  }
+
+  .cant-cont {
+    display: flex;
+    flex-direction: row;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #card-exp-val {
+    color: var(--Red);
+    font-size: 0.8rem;
+
+    display: none;
+  }
+  #card-cvc-val {
+    color: var(--Red);
+    font-size: 0.8rem;
+    display: none;
+  }
+
+  .completed-container {
+    margin: 17rem 10rem 0rem 7.5rem;
+  }
+
+  .check-icon-completed {
+    width: 70px;
+  }
+  .continue-btn {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+}
