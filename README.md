@@ -16,7 +16,7 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 
 ### Links
 
-- Solution URL: (https://github.com/Eva-S-Santos/Frontend-Mentor-Results-summary-component)
+- Solution URL: (https://github.com/Eva-S-Santos/Interactive-card-details-form)
 
 ### Built with
 
