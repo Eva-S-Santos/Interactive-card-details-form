@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Interactive Card Details Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="main-container">
+        <div class="second-container">
+          <div class="cards-desing">
+            <div class="card-frente">
+              <div class="logo-container">
+                <img class="logo" src="images/card-logo.svg" alt="" />
+              </div>
+              <div class="contenido-tajeta">
+                <h1 id="num-card">0000 0000 0000 0000</h1>
+                <div class="nombre-numero-desing">
+                  <span id="name-card">JANE APPLESEED</span>
+                  <span id="date-card"
+                    ><span id="month">00</span><span>/</span
+                    ><span id="year">00</span></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="card-atras">
+              <span class="cvc-num" id="cvc-card">000</span>
+              <img class="card-abajo" src="images/bg-card-back.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="forma-container" id="form-cont">
+          <form action="#" name="forma">
+            <label for="name" class="card-holder-space">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              name="name"
+              id="name-input-field"
+              class="input-all"
+              placeholder=" e.g. Jane Appleseed"
+            />
+            <label for="number">CARD NUMBER</label>
+            <input
+              type="text"
+              name="number"
+              id="input-num"
+              class="input-all"
+              placeholder="  e.g. 1234 5678 9123 0000"
+              maxlength="16"
+            />
+            <p id="card-num-val">Wrong format, numbers only</p>
+            <div class="labels">
+              <label for="date" class="label-date"
+                >EXP. DATE <span class="left-space">(MM/YY)</span>
+              </label>
+              <label for="cvc" class="cvc-left-space">CVC</label>
+            </div>
+            <div class="inputs-abajo">
+              <div>
+                <input
+                  type="text"
+                  name="month"
+                  id="month-input"
+                  class="input-size input-month input-all"
+                  placeholder="MM"
+                />
+                <p id="card-exp-val">Can't be blank</p>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="year"
+                  id="year-input"
+                  class="input-size input-all"
+                  placeholder="YY"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="text"
+                  name="cvc"
+                  id="cvc-input"
+                  class="input-size input-size-b input-all"
+                  placeholder="e.g. 123"
+                />
+                <p id="card-cvc-val">Can't be blank</p>
+              </div>
+            </div>
+
+            <button type="button" onclick="btnFunc()">Confirm</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
