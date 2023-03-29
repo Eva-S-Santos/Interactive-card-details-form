@@ -22,6 +22,14 @@ inputName.addEventListener("input", () => {
 });
 
 nombreFunc = () => {
+  const numbers = /^[0-9]+$/;
+  if (inputName.value.match(numbers)) {
+    inputName.style.border = "1px solid hsl(0, 100%, 66%)";
+    document.getElementById("card-name-val").style.display = "block";
+  } else {
+    inputName.style.border = "1px solid hsl(279, 6%, 55%)";
+    document.getElementById("card-name-val").style.display = "none";
+  }
   nombre = inputName.value;
   nameCard.innerHTML = nombre.toUpperCase();
 };
@@ -34,7 +42,8 @@ inputNum.addEventListener("input", () => {
 });
 
 numFunc = () => {
-  if (inputNum.value / inputNum.value !== 1) {
+  const numbersNum = /^[0-9]+$/;
+  if (!inputNum.value.match(numbersNum)) {
     alertaN.style.display = "block";
     inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
@@ -43,7 +52,6 @@ numFunc = () => {
   }
   numero = inputNum.value;
   numCard.innerHTML = numero.replace(/.{4}/g, "$& ");
-  infoCard.push({ numCard: numero });
 };
 
 monthInput.addEventListener("input", () => {
@@ -54,7 +62,8 @@ monthInput.addEventListener("input", () => {
 });
 
 monthFunc = () => {
-  if (monthInput.value == "" || monthInput.value / monthInput.value !== 1) {
+  const numbersMonth = /^[0-9]+$/;
+  if (!monthInput.value.match(numbersMonth || monthInput.value == "")) {
     alertaM.style.display = "block";
     monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
@@ -73,7 +82,8 @@ yearInput.addEventListener("input", () => {
 });
 
 yearFunc = () => {
-  if (yearInput.value == "" || yearInput.value / yearInput.value !== 1) {
+  const numbersYear = /^[0-9]+$/;
+  if (!yearInput.value.match(numbersYear) || yearInput.value == "") {
     alertaM.style.display = "block";
     yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
@@ -82,7 +92,6 @@ yearFunc = () => {
   }
   ano = yearInput.value;
   yearCard.innerHTML = ano;
-  infoCard.push({ yearCard: ano });
 };
 
 cvcInput.addEventListener("input", () => {
@@ -93,7 +102,8 @@ cvcInput.addEventListener("input", () => {
 });
 
 cvcFunc = () => {
-  if (cvcInput.value == "" || cvcInput.value / cvcInput.value !== 1) {
+  const numbersCvc = /^[0-9]+$/;
+  if (!cvcInput.value.match(numbersCvc) || cvcInput.value == "") {
     alertaC.style.display = "block";
     cvcInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
@@ -102,10 +112,21 @@ cvcFunc = () => {
   }
   cvc = cvcInput.value;
   cvcCard.innerHTML = cvc;
-  infoCard.push({ cvcCard: cvc });
 };
 
 btnFunc = () => {
+  const numbers = /^[0-9]+$/;
+  if (inputName.value.match(numbers)) {
+    inputName.style.border = "1px solid hsl(0, 100%, 66%)";
+    document.getElementById("card-name-val").style.display = "block";
+  } else {
+    inputName.style.border = "1px solid hsl(279, 6%, 55%)";
+    document.getElementById("card-name-val").style.display = "none";
+    validationFunc();
+  }
+};
+
+validationFunc = () => {
   const nameCheck = document.forma.name.value;
   const numCheck = document.forma.number.value;
   const monthCheck = document.forma.month.value;
@@ -119,6 +140,7 @@ btnFunc = () => {
     yearCheck === "" ||
     cvcCheck === ""
   ) {
+    inputName.style.border = "1px solid hsl(0, 100%, 66%)";
     inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
     monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
     yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
