@@ -38,11 +38,9 @@ numFunc = () => {
   if (inputNum.value / inputNum.value !== 1) {
     alertaN.style.display = "block";
     inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
-    numCard.style.marginBottom = "23px";
   } else {
     alertaN.style.display = "none";
     inputNum.style.border = "1px solid hsl(279, 6%, 55%)";
-    numCard.style.marginBottom = "0px";
   }
   numero = inputNum.value;
   numCard.innerHTML = numero.replace(/.{4}/g, "$& ");
