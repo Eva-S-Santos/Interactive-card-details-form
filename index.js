@@ -64,7 +64,6 @@ monthFunc = () => {
   }
   mes = monthInput.value;
   monthCard.innerHTML = mes;
-  infoCard.push({ monthCard: mes });
 };
 
 yearInput.addEventListener("input", () => {
