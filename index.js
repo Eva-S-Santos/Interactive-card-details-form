@@ -24,7 +24,6 @@ inputName.addEventListener("input", () => {
 nombreFunc = () => {
   nombre = inputName.value;
   nameCard.innerHTML = nombre.toUpperCase();
-  infoCard.push({ nameCard: nombre });
 };
 //cardnumber
 inputNum.addEventListener("input", () => {
