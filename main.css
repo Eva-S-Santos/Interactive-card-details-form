@@ -65,6 +65,7 @@ body {
   font-size: 1rem;
   letter-spacing: 2.4px;
   font-weight: 400;
+  height: 23.2px;
 }
 
 .contenido-tajeta span {
@@ -291,6 +292,7 @@ button {
     letter-spacing: 4px;
     font-weight: 400;
     margin-top: 1.3rem;
+    height: 34.4px;
   }
 
   .contenido-tajeta span {
