@@ -196,6 +196,14 @@ button {
   margin-bottom: 1rem;
 }
 
+
+#card-name-val {
+  color: var(--Red);
+  font-size: 0.6rem;
+  padding-top: 0.5rem;
+  display: none;
+} 
+
 #card-cvc-val {
   color: var(--Red);
   font-size: 0.6rem;
