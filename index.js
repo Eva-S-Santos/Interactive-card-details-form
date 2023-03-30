@@ -63,7 +63,7 @@ monthInput.addEventListener("input", () => {
 
 monthFunc = () => {
   const numbersMonth = /^[0-9]+$/;
-  if (!monthInput.value.match(numbersMonth || monthInput.value == "")) {
+  if (!monthInput.value.match(numbersMonth) || monthInput.value == "") {
     alertaM.style.display = "block";
     monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
   } else {
