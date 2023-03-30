@@ -119,6 +119,9 @@ btnFunc = () => {
   if (inputName.value.match(numbers)) {
     inputName.style.border = "1px solid hsl(0, 100%, 66%)";
     document.getElementById("card-name-val").style.display = "block";
+  } else if (inputNum.value < 16) {
+    inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
+    document.getElementById("card-num-sixteen-val").style.display = "block";
   } else {
     inputName.style.border = "1px solid hsl(279, 6%, 55%)";
     document.getElementById("card-name-val").style.display = "none";
