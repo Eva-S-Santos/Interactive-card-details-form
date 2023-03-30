@@ -151,7 +151,11 @@ validationFunc = () => {
     alertaM.style.display = "block";
     alertaC.style.display = "block";
     return false;
+  } else if (inputNum.value < 16) {
+    inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
+    document.getElementById("card-num-sixteen-val").style.display = "block";
   } else {
+    inputNum.style.border = "1px solid hsl(279, 6%, 55%)";
     formContainer.innerHTML = "";
     formContainer.innerHTML += `
       <div class="completed-container">
