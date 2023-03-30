@@ -187,6 +187,12 @@ button {
   padding-top: 0.5rem;
   display: none;
 }
+#card-num-sixteen-val {
+  color: var(--Red);
+  font-size: 0.6rem;
+  padding-top: 0.5rem;
+  display: none;
+}
 
 #card-exp-val {
   color: var(--Red);
