@@ -12,6 +12,7 @@ const cvcInput = document.getElementById("cvc-input");
 const cvcCard = document.getElementById("cvc-card");
 const alertaC = document.getElementById("card-cvc-val");
 const formContainer = document.getElementById("form-cont");
+const alertaSixTeen = document.getElementById("card-num-sixteen-val");
 
 //cardholder
 inputName.addEventListener("input", () => {
@@ -114,47 +115,15 @@ cvcFunc = () => {
   cvcCard.innerHTML = cvc;
 };
 
-btnFunc = () => {
-  const numbers = /^[0-9]+$/;
-  if (inputName.value.match(numbers)) {
-    inputName.style.border = "1px solid hsl(0, 100%, 66%)";
-    document.getElementById("card-name-val").style.display = "block";
-  }  else {
-    inputName.style.border = "1px solid hsl(279, 6%, 55%)";
-    document.getElementById("card-name-val").style.display = "none";
-    validationFunc();
-  }
-};
+btnFunc = document.querySelector("#btn");
+btnFunc.addEventListener("click", () => {
+  nameMatch(inputName);
+  formValidation(inputName, inputNum, monthInput, yearInput, cvcInput);
+});
 
-validationFunc = () => {
-  const nameCheck = document.forma.name.value;
-  const numCheck = document.forma.number.value;
-  const monthCheck = document.forma.month.value;
-  const yearCheck = document.forma.year.value;
-  const cvcCheck = document.forma.cvc.value;
-
-  if (
-    nameCheck === "" ||
-    numCheck === "" ||
-    monthCheck === "" ||
-    yearCheck === "" ||
-    cvcCheck === ""
-  ) {
-    inputName.style.border = "1px solid hsl(0, 100%, 66%)";
-    inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
-    monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
-    yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
-    cvcInput.style.border = "1px solid hsl(0, 100%, 66%)";
-    alertaM.style.display = "block";
-    alertaC.style.display = "block";
-    return false;
-  } else if (inputNum.value < 16) {
-    inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
-    document.getElementById("card-num-sixteen-val").style.display = "block";
-  } else {
-    inputNum.style.border = "1px solid hsl(279, 6%, 55%)";
-    formContainer.innerHTML = "";
-    formContainer.innerHTML += `
+completedFun = () => {
+  formContainer.innerHTML = "";
+  formContainer.innerHTML += `
       <div class="completed-container">
         <img class="check-icon-completed" src="images/icon-complete.svg" alt="" />
         <h2>THANK YOU!</h2>
@@ -162,5 +131,51 @@ validationFunc = () => {
         <button type="button" class="continue-btn">Continue</button>
       </div>
       `;
+};
+
+nameMatch = (nameCheck) => {
+  const numbers = /^[0-9]+$/;
+  if (nameCheck.value.match(numbers)) {
+    inputName.style.border = "1px solid hsl(0, 100%, 66%)";
+    document.getElementById("card-name-val").style.display = "block";
+  } else {
+    return false;
   }
 };
+
+formValidation = (namePara, numPara, monthPara, yearPara, cvcPara) => {
+  if (namePara.value.length < 5) {
+    inputName.style.border = "1px solid hsl(0, 100%, 66%)";
+    console.log("Empty name field");
+    return false;
+  } else if (numPara.value.length < 16) {
+    inputNum.addEventListener("click", () => {
+      alertaSixTeen.style.display = "none";
+    });
+    if ((alertaN.style.display = "block" === true)) {
+      alertaSixTeen.style.display = "none";
+    }
+    inputNum.style.border = "1px solid hsl(0, 100%, 66%)";
+    alertaSixTeen.style.display = "block";
+    console.log("Empty number field");
+    return false;
+  } else if (monthPara.value === "" || monthPara.value > 12) {
+    monthInput.style.border = "1px solid hsl(0, 100%, 66%)";
+    alertaM.style.display = "block";
+    console.log("Empty month field");
+  } else if (yearPara.value === "" || yearPara.value < 23) {
+    yearInput.style.border = "1px solid hsl(0, 100%, 66%)";
+    alertaM.style.display = "block";
+    console.log("Empty year field");
+  } else if (cvcPara.value === "" || cvcPara.value.length < 3) {
+    cvcInput.style.border = "1px solid hsl(0, 100%, 66%)";
+    alertaC.style.display = "block";
+    console.log("Empty cvc field");
+    return false;
+  } else {
+    completedFun();
+    console.log("Form submited");
+    return true;
+  }
+};
+
